@@ -1,0 +1,230 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #000428, #004e92);
+    overflow: hidden;
+    color: white;
+    transition: background 2s ease-in-out;
+  }
+  
+  body.active {
+    background: radial-gradient(circle, #ff7eb3, #ff758c, #6a11cb);
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+/* Estilo para los botones */
+.main-button, .secondary-button {
+    background: linear-gradient(90deg, #ff7eb3, #ff758c);
+    color: white;
+    font-size: 1.5rem;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: absolute; /* Posicionar los botones */
+    top: 65%; /* Mantenerlos centrados verticalmente */
+    left: 50%; /* Mantenerlos centrados horizontalmente */
+    transform: translate(-50%, -50%); /* Ajustar para que el centro esté en la pantalla */
+}
+
+.main-button:hover, .secondary-button:hover {
+    transform: translate(-50%, -50%) scale(1.1); /* Solo aumentar tamaño sin mover */
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3); /* Agrandar sombra para mayor efecto */
+}
+
+/* Contenedor de flores centrado */
+#flowers {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-wrap: wrap; /* Permite que las flores se distribuyan en varias filas */
+    justify-content: center; /* Centra las flores en el eje horizontal */
+    align-items: center; /* Centra las flores en el eje vertical */
+    gap: 20px; /* Espacio entre las flores */
+}
+
+/* Flores */
+/* Contenedor de flores centrado */
+#flowers {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centra el contenedor */
+    display: flex;
+    flex-wrap: wrap; /* Permite que las flores se distribuyan en varias filas */
+    justify-content: center; /* Centra las flores en el eje horizontal */
+    align-items: center; /* Centra las flores en el eje vertical */
+    gap: 20px; /* Espacio entre las flores */
+    width: 35vw; /* Controla el ancho máximo del contenedor (puedes ajustarlo) */
+    height: 35vh; /* Controla la altura máxima del contenedor */
+    overflow: hidden; /* Para que el contenido no sobresalga fuera del contenedor */
+}
+
+/* Flores */
+.flowers-img {
+    width: 100px; /* Tamaño base de las flores */
+    height: auto;
+    animation: grow 2s ease-out forwards, shimmer 1.5s infinite alternate;
+}
+
+/* Animación de crecimiento */
+@keyframes grow {
+    from {
+        transform: scale(0); /* Empieza en tamaño 0 */
+    }
+    to {
+        transform: scale(1); /* Termina al tamaño normal */
+    }
+}
+
+/* Animación de resplandor */
+@keyframes shimmer {
+    0% { filter: brightness(1); }
+    100% { filter: brightness(1.5); }
+}
+
+  /* Card */
+  #card {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  .card-content h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .card-content p {
+    font-size: 1.2rem;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Fireworks */
+  .fireworks-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+  }
+  
+  .firework {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    animation: explode 1.5s ease-out forwards;
+  }
+  
+  @keyframes explode {
+    0% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.8;
+      transform: scale(3);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(0);
+    }
+  }
+  
+  /* Confetti */
+  .confetti-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  
+  .confetti-piece {
+    position: absolute;
+    width: 10px;
+    height: 15px;
+    background-color: randomColor();
+    opacity: 0.8;
+    animation: fall 3s linear infinite;
+  }
+  
+  @keyframes fall {
+    0% {
+      transform: translateY(-100%) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+  
+  /* Candles */
+  .candle {
+    width: 20px;
+    height: 50px;
+    background: orange;
+    margin: 5px;
+    display: inline-block;
+    border-radius: 10px;
+    animation: flicker 0.3s infinite;
+    position: absolute; /* Coloca las velas de manera precisa */
+    bottom: 15px; /* Alinea las velas al borde inferior del pastel */
+    top: 68%;
+}
+
+.candle:nth-child(1) {
+    left: 45%; /* Primera vela, a la izquierda */
+}
+
+.candle:nth-child(2) {
+    left: 50%; /* Segunda vela, en el centro */
+    transform: translateX(-50%); /* Centra la vela en el medio */
+}
+
+.candle:nth-child(3) {
+    left: 55%; /* Tercera vela, a la derecha */
+}
+
+  @keyframes flicker {
+    0%, 100% {
+      opacity: 0.9;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+  
+  .candle.off {
+    background: gray;
+  }
+  

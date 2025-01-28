@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sorpresa Animada</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="container">
+    <button id="showFlowersButton" class="main-button">¡Haz clic para la sorpresa!</button>
+    
+   <!-- Contenedor de flores -->
+<div id="flowers" class="hidden">
+    <img class="flowers-img" src="flowers1.png" alt="Flores">
+    <img class="flowers-img" src="flowers2.png" alt="Flores">
+    <img class="flowers-img" src="flowers3.png" alt="Flores">
+    <img class="flowers-img" src="flowers4.png" alt="Flores">
+    <img class="flowers-img" src="flowers5.png" alt="Flores">
+    <img class="flowers-img" src="flowers6.png" alt="Flores">
+    <!-- Puedes añadir más flores según sea necesario -->
+</div>
+    </div>
+    
+    <div id="card" class="hidden">
+      <div class="card-content">
+        <h1>¡FELIZ CUMPLEAÑOS MIYU!</h1>
+        <p>Esta sorpresa está dedicada especialmente para ti.</p>
+        <p>¡Feliz cumpleaños! 🎉 Hoy es un día para celebrar la increíble persona que eres. Que este nuevo año de vida te traiga momentos aún más especiales, logros que te llenan de orgullo y muchas razones para sonreír. Disfruta al máximo cada instante, rodeado de todo lo que te hace feliz. ¡Que todos tus sueños sigan tomando forma y que tengas un día tan maravilloso como tú! 🥳🎂✨ sopla tus disque velas virtuales jajaja</p>
+      </div>
+    </div>
+
+    <div id="fireworks" class="fireworks-container"></div>
+    
+    <div id="candles">
+      <div id="candle1" class="candle"></div>
+      <div id="candle2" class="candle"></div>
+      <div id="candle3" class="candle"></div>
+    </div>
+    
+    <button id="turnOffCandlesButton" class="secondary-button hidden">Apagar Velas</button>
+    
+    <div id="confetti" class="confetti-container hidden"></div>
+    
+    <!-- Audios -->
+    <audio id="backgroundMusic" src="background-music.mp3" loop></audio>
+    <audio id="fireworkSound" src="firework.mp3"></audio>
+    <audio id="magicSound" src="magic.mp3"></audio>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
