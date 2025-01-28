@@ -199,7 +199,7 @@ body {
     animation: flicker 0.3s infinite;
     position: absolute; /* Coloca las velas de manera precisa */
     bottom: 15px; /* Alinea las velas al borde inferior del pastel */
-    top: 68%;
+    top: 80%;
 }
 
 .candle:nth-child(1) {
