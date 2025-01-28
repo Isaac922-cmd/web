@@ -33,7 +33,7 @@ body {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: absolute; /* Posicionar los botones */
-    top: 65%; /* Mantenerlos centrados verticalmente */
+    top: 90%; /* Mantenerlos centrados verticalmente */
     left: 50%; /* Mantenerlos centrados horizontalmente */
     transform: translate(-50%, -50%); /* Ajustar para que el centro esté en la pantalla */
 }
